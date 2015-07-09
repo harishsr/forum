@@ -2,29 +2,30 @@
 
 == VERSIONS
 
- * ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
- * rails 4.2.1
- * rspec & capybara for testing
- * sqlite3 used in development & testing, postgresql used in production
- * heroku used for production
- * amazon web services used to host images
+* ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
+* rails 4.2.1
+* rspec & capybara for testing
+* sqlite3 used in development & testing, postgresql used in production
+* heroku used for production
+* amazon web services used to host images
 
 == LOOSE PLAN
- * Create a forum for registered users to post 
- * Anyone can view the posts
- * Admins can moderate the posts
- * Posts can have images
- * Users 
+* Create a forum for registered users to post 
+* Anyone can view the posts
+* Admins can moderate the posts
+* Posts can have images
+* Users 
   * can be fictional?
   * can create fictional stories?
   * can have avatars?
   * only emails are real?
   * can be admin or not
- * Forum
+* Forum
   * various topics (learning webdev, learning rails, getting jobs, success stories, etc.)
 
 == MODELS
- * Users
+
+* Users
   * Devise defaults
   * Admin: boolean
   * Display name: string
@@ -32,10 +33,10 @@
   * Proud achievement: string
   * About: text
   * Avatar: image
- * Forums
+* Forums
   * Posts as a resource
   * Public?  Private?
- * Posts
+* Posts
   * image: string?
   * video: string?  --- research
   * votes: integer
