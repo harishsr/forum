@@ -30,7 +30,6 @@
   * Admin: boolean
   * Display name: string
   * Signature: text
-  * Proud achievement: string
   * About: text
   * Avatar: image
 * Forums
