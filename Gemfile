@@ -26,7 +26,6 @@ gem 'fog',                              '1.23.0'
 
 
 group :development, :test do
-  gem 'rubocop',                        '0.32.0' # new
   gem 'byebug',                         '4.0.5'
   gem 'web-console',                    '2.0'
   gem 'spring',                         '1.3.6'
