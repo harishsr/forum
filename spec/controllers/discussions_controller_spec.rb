@@ -4,6 +4,8 @@ RSpec.describe DiscussionsController, type: :controller do
 
   # let!(:discussion) { Discussion.create!( ) }
 
+  # The routing 'expects' can be consolidated into a helper & a method
+
   it "has a working index" do 
     get :index
     expect(response).to be_success

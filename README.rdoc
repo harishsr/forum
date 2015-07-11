@@ -42,8 +42,10 @@
   * Responses as a resource
   * title: string
   * content: text
+  * discussion: references
 
 * Responses
+  * topic: references
   * content: text
   * image: string?
   * video: string?  --- research
