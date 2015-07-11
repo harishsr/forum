@@ -1,14 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe ForumsController, type: :controller do
+RSpec.describe DiscussionsController, type: :controller do
 
-  # let!(:forum) { Forum.create!( ) }
+  # let!(:discussion) { Discussion.create!( ) }
 
   it "has a working index" do 
     get :index
     expect(response).to be_success
-    expect(:get => "forums").to route_to(
-      :controller => "forums",
+    expect(:get => "discussions").to route_to(
+      :controller => "discussions",
       :action => "index"
     )
     expect(response).to render_template('index')
@@ -17,8 +17,8 @@ RSpec.describe ForumsController, type: :controller do
   it "has a new page" do
     get :new
     expect(response).to be_success
-    expect(:get => "forums/new").to route_to(
-      :controller => "forums",
+    expect(:get => "discussions/new").to route_to(
+      :controller => "discussions",
       :action => "new"
     )
     expect(response).to render_template('new')

@@ -32,11 +32,19 @@
   * Signature: text
   * About: text
   * Avatar: image
-* Forums
-  * Posts as a resource
-  * Public?  Private?
-* Posts
+
+* Discussions
+  * Topics as a resource
+  * title: string
+  * description: text
+
+* Topics
+  * Responses as a resource
+  * title: string
+  * content: text
+
+* Responses
+  * content: text
   * image: string?
   * video: string?  --- research
   * votes: integer
-  * 

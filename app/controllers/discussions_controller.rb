@@ -1,7 +1,7 @@
-class ForumsController < ApplicationController
-  
+class DiscussionsController < ApplicationController
+
   # INESCUD
-  
+
   def index
   end
 
