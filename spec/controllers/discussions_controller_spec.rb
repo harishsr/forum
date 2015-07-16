@@ -32,7 +32,7 @@ RSpec.describe DiscussionsController, type: :controller do
     it "has an edit page" do 
       get :edit, id: discussion.id
       expect(response).to be_success
-      expect(edit: "discussions/1/edit").to route_to(
+      expect(get: "discussions/1/edit").to route_to(
         controller: "discussions",
         action: "edit",
         id: "1"
@@ -43,7 +43,7 @@ RSpec.describe DiscussionsController, type: :controller do
     it "has a show page" do 
       get :show, id: discussion.id
       expect(response).to be_success
-      expect(show: "discussions/1/").to route_to(
+      expect(get: "discussions/1/").to route_to(
         controller: "discussions",
         action: "show",
         id: "1"
