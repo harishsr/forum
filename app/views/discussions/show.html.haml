@@ -1,0 +1,6 @@
+%h2= @discussion.title
+%p= @discussion.description
+
+// Edit & Delete only displays for Admins
+= link_to "Edit", edit_discussion_path(@discussion)
+= link_to "Delete", discussion_path(@discussion), method: :delete

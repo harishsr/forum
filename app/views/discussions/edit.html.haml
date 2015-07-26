@@ -1,0 +1,5 @@
+%h2 Create a new discussion
+= simple_form_for @discussion, method: :patch do |f|
+  = f.input :title
+  = f.input :description
+  = f.submit "Update"
