@@ -53,11 +53,19 @@ RSpec.feature "Discussions", type: :feature do
       create_discussion
       create_discussion title: @new_title, description: @new_description
       visit '/'
-      
+
       expect(page).to have_content @title
       expect(page).to have_content @description
       expect(page).to have_content @new_title
       expect(page).to have_content @new_description
+    end
+  end
+
+  describe "Layout" do 
+    it "has a navigation pane" do 
+      expect(page).to have_css ".nav" 
+      expect(page).to have_link "Home"
+      expect(page).to have_link "New forum"
     end
   end
 

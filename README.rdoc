@@ -15,10 +15,7 @@
 * Admins can moderate the posts
 * Posts can have images
 * Users 
-  * can be fictional?
-  * can create fictional stories?
-  * can have avatars?
-  * only emails are real?
+  * can have avatars
   * can be admin or not
 * Forum
   * various topics (learning webdev, learning rails, getting jobs, success stories, etc.)
