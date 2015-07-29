@@ -1,9 +1,8 @@
-%h1.jumbotron
-  Choose your Forum
 .discussions
   - if @discussions
     - @discussions.each do |d|
       %h4= link_to d.title, d
       %p= d.description
+      %hr
 
 = link_to "New", new_discussion_path

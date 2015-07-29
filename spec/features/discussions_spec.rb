@@ -3,11 +3,7 @@ require 'rails_helper'
 RSpec.feature "Discussions", type: :feature do
   before do 
     visit '/'
-    @title = "Questions"
-    @description = "Questions on discussions."
-
-    @new_title = "Fitness"
-    @new_description = "Fitness problems and answers."
+    discussion_variables
   end
 
   describe "CRUD" do 
@@ -23,6 +19,17 @@ RSpec.feature "Discussions", type: :feature do
 
       expect(page).to have_content @title
       expect(page).to have_content @description
+    end
+
+    it "creates & shows multiple discussions" do 
+      create_discussion(title: @title,     description: @description)
+      create_discussion(title: @new_title, description: @new_description)
+      visit '/'
+
+      expect(page).to have_content @title
+      expect(page).to have_content @description
+      expect(page).to have_content @new_title
+      expect(page).to have_content @new_description
     end
 
     it "edits a discussion" do 
@@ -46,7 +53,6 @@ RSpec.feature "Discussions", type: :feature do
 
       click_link "Delete"
       expect(page).to_not have_content @title
-      expect(page).to have_content "Choose your Forum"
     end
 
     it "displays discussions on the index" do 
@@ -62,11 +68,15 @@ RSpec.feature "Discussions", type: :feature do
   end
 
   describe "Layout" do 
-    it "has a navigation pane" do 
+    it "has a working nav pane" do 
       expect(page).to have_css ".nav" 
       expect(page).to have_link "Home"
       expect(page).to have_link "New forum"
     end
+  end
+
+  describe "Editing by Admins" do 
+
   end
 
 end
